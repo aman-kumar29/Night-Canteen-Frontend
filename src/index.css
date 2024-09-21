@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Montserrat&family=Quicksand:wght@300..700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: Quicksand, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+/* General Scrollbar Styles */
+.light-scrollbar,
+.dark-scrollbar {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track); /* For Firefox */
+}
+
+.light-scrollbar::-webkit-scrollbar,
+.dark-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.light-scrollbar::-webkit-scrollbar-thumb,
+.dark-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 5px;
+}
+
+.light-scrollbar::-webkit-scrollbar-track,
+.dark-scrollbar::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+}
+
+/* Light Theme Scrollbar */
+.light-scrollbar {
+  --scrollbar-thumb: #888;
+  --scrollbar-track: #f1f1f1;
+}
+
+/* Dark Theme Scrollbar */
+.dark-scrollbar {
+  --scrollbar-thumb: #666;
+  --scrollbar-track: #333;
+}
+
+/* Hide Scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+  margin-right:10px;
+}
+/* Wrapper styles */
+.wrapper {
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+/* Markdown styles */
+.markdown {
+  padding: 0.5rem;
+}
+
+/* Light mode styles */
+.markdown.light h1,
+.markdown.light h2,
+.markdown.light h3,
+.markdown.light p,
+.markdown.light ul,
+.markdown.light ol {
+  @apply text-[#0000009f];
+}
+
+.markdown.light h1 {
+  @apply text-3xl font-bold mt-2;
+}
+
+.markdown.light h2 {
+  @apply text-2xl font-bold mt-2;
+}
+
+.markdown.light h3 {
+  @apply text-xl font-bold mt-2;
+}
+
+.markdown.light p {
+  @apply text-base;
+}
+
+.markdown.light ul {
+  @apply list-disc pl-5;
+}
+
+.markdown.light ol {
+  @apply list-decimal pl-5;
+}
+
+.markdown.light code {
+  @apply bg-[#00000032] text-red-400 px-1 py-0.5 rounded;
+}
+
+.markdown.light pre code {
+  @apply bg-white rounded p-2 m-0;
+}
+
+.markdown.light img {
+  @apply bg-white p-2;
+}
+
+/* Dark mode styles */
+.markdown.dark h1,
+.markdown.dark h2,
+.markdown.dark h3,
+.markdown.dark p,
+.markdown.dark ul,
+.markdown.dark ol {
+  @apply text-[#ffffff63];
+}
+
+.markdown.dark h1 {
+  @apply text-3xl font-bold mt-2;
+}
+
+.markdown.dark h2 {
+  @apply text-2xl font-bold mt-2;
+}
+
+.markdown.dark h3 {
+  @apply text-xl font-bold mt-2;
+}
+
+.markdown.dark p {
+  @apply text-base;
+}
+
+.markdown.dark ul {
+  @apply list-disc pl-5;
+}
+
+.markdown.dark ol {
+  @apply list-decimal pl-5;
+}
+
+.markdown.dark code {
+  @apply bg-[#2d2d2e] text-red-400 px-1 py-0.5 rounded;
+}
+
+.markdown.dark pre code {
+  @apply bg-white rounded p-2 m-0;
+}
+
+.markdown.dark img {
+  @apply bg-white p-2;
+}
